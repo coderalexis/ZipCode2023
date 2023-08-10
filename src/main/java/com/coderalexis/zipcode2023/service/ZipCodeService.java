@@ -1,8 +1,8 @@
-package com.example.zipcode2023.service;
+package com.coderalexis.zipcode2023.service;
 
-import com.example.zipcode2023.exception.ZipCodeNotFoundException;
-import com.example.zipcode2023.model.Settlements;
-import com.example.zipcode2023.model.ZipCode;
+import com.coderalexis.zipcode2023.model.Settlements;
+import com.coderalexis.zipcode2023.model.ZipCode;
+import com.coderalexis.zipcode2023.exception.ZipCodeNotFoundException;
 import org.springframework.stereotype.Service;
 import java.util.concurrent.ConcurrentHashMap;
 @Service

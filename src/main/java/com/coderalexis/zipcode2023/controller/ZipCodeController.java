@@ -1,8 +1,8 @@
-package com.example.zipcode2023.controller;
+package com.coderalexis.zipcode2023.controller;
 
-import com.example.zipcode2023.model.Settlements;
-import com.example.zipcode2023.model.ZipCode;
-import com.example.zipcode2023.service.ZipCodeService;
+import com.coderalexis.zipcode2023.model.Settlements;
+import com.coderalexis.zipcode2023.model.ZipCode;
+import com.coderalexis.zipcode2023.service.ZipCodeService;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.http.HttpStatus;

@@ -62,13 +62,13 @@ Performance tests were conducted on the endpoint `http://127.0.0.1:8080/zip-code
 - **Server Port**: 8080
 - **Document Path**: /zip-code/70000
 - **Document Length**: 686 bytes
-- **Concurrency Level**: 1000
-- **Total Requests**: 100000
+- **Concurrency Level**: 1,000
+- **Total Requests**: 100,000
 
 ### Results:
 
 - **Time taken for tests**: 50.704 seconds
-- **Complete requests**: 100000
+- **Complete requests**: 100,000
 - **Failed requests**: 0
 - **Total transferred**: 88000000 bytes
 - **HTML transferred**: 68600000 bytes

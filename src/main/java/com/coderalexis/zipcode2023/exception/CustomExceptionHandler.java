@@ -1,4 +1,4 @@
-package com.example.zipcode2023.exception;
+package com.coderalexis.zipcode2023.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.example.zipcode2023.model;
+package com.coderalexis.zipcode2023.model;
 
 import lombok.Data;
 import java.io.Serializable;

@@ -1,4 +1,4 @@
-package com.example.zipcode2023;
+package com.coderalexis.zipcode2023;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

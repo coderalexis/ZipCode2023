@@ -1,4 +1,4 @@
-package com.example.zipcode2023;
+package com.coderalexis.zipcode2023;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
