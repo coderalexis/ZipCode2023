@@ -23,7 +23,6 @@ public class ZipCodeService {
     }
 
     public ZipCode getZipCode(String zipCode) {
-        System.out.println(zipCodesMap.size());
         if(!zipCodesMap.containsKey(zipCode)) {
             throw new ZipCodeNotFoundException("No se encontro el codigo postal:"+zipCode);
         }
