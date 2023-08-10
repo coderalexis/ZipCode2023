@@ -11,10 +11,15 @@ public class ZipCodeService {
     private final ConcurrentHashMap<String, ZipCode> zipCodesMap = new ConcurrentHashMap<>();
 
     public void addZipCode(ZipCode zipCode, Settlements settlement) {
-        zipCodesMap.putIfAbsent(zipCode.getZip_code(), zipCode);
-        if (zipCodesMap.containsKey(zipCode.getZip_code())) {
-            zipCodesMap.get(zipCode.getZip_code()).getSettlements().add(settlement);
-        }
+        zipCodesMap.compute(zipCode.getZip_code(), (key, existingZipCode) -> {
+            if (existingZipCode == null) {
+                zipCode.getSettlements().add(settlement);
+                return zipCode;
+            } else {
+                existingZipCode.getSettlements().add(settlement);
+                return existingZipCode;
+            }
+        });
     }
 
     public ZipCode getZipCode(String zipCode) {
