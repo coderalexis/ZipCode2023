@@ -33,45 +33,6 @@ public class ZipCodeController {
         return new ResponseEntity<>(zipCodeService.getZipCode(zipcode), HttpStatus.OK);
     }
 
-    @EventListener(ApplicationReadyEvent.class)
-    public void initialConfiguration() {
-        int countLine = 0;
-        String filePath = "/home/CPdescarga.txt";
-        BufferedReader buffer;
-        String line;
-        try {
-            buffer = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), StandardCharsets.ISO_8859_1));
-            try {
-                while ((line = buffer.readLine()) != null) {
-                    countLine++;
-                    if (countLine < 2)
-                        continue;
-
-                    String separator = Pattern.quote("|");
-                    String[] words = line.split(separator);
-                    ZipCode zipcode = new ZipCode();
-                    zipcode.setZip_code(words[0]);
-                    zipcode.setLocality(words[4]);
-                    zipcode.setFederal_entity(words[5]);
-
-                    Settlements settlements = new Settlements();
-                    settlements.setName(words[1]);
-                    settlements.setZone_type((words.length < 15) ? words[words.length - 1] : words[words.length - 2]);
-                    settlements.setSettlement_type(words[2]);
-
-                    zipcode.setMunicipality(words[3]);
-                    zipcode.setSettlements(new ArrayList<>());
-
-                    zipCodeService.addZipCode(zipcode, settlements);
-                }
-                buffer.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
 }
 
 
